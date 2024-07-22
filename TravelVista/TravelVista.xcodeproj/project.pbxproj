@@ -20,6 +20,9 @@
 		42B90C1F2B2A056000779364 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42B90C1D2B2A056000779364 /* LaunchScreen.storyboard */; };
 		E0EDBD6E2C47CF9500A157EB /* TitleViewSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EDBD6D2C47CF9500A157EB /* TitleViewSwiftUI.swift */; };
 		E0EDBD702C47D07000A157EB /* RateStarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EDBD6F2C47D07000A157EB /* RateStarsView.swift */; };
+		E0EDBD722C4DE2C700A157EB /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EDBD712C4DE2C700A157EB /* ListView.swift */; };
+		E0EDBD742C4E158700A157EB /* CustomCellSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EDBD732C4E158700A157EB /* CustomCellSwiftUI.swift */; };
+		E0EDBD762C4E1FBB00A157EB /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EDBD752C4E1FBB00A157EB /* ListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		42B90C202B2A056000779364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0EDBD6D2C47CF9500A157EB /* TitleViewSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewSwiftUI.swift; sourceTree = "<group>"; };
 		E0EDBD6F2C47D07000A157EB /* RateStarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateStarsView.swift; sourceTree = "<group>"; };
+		E0EDBD712C4DE2C700A157EB /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		E0EDBD732C4E158700A157EB /* CustomCellSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellSwiftUI.swift; sourceTree = "<group>"; };
+		E0EDBD752C4E1FBB00A157EB /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,8 @@
 			children = (
 				E0EDBD6D2C47CF9500A157EB /* TitleViewSwiftUI.swift */,
 				E0EDBD6F2C47D07000A157EB /* RateStarsView.swift */,
+				E0EDBD712C4DE2C700A157EB /* ListView.swift */,
+				E0EDBD732C4E158700A157EB /* CustomCellSwiftUI.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -124,6 +132,7 @@
 		E0EDBD6C2C47CF5D00A157EB /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E0EDBD752C4E1FBB00A157EB /* ListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -202,9 +211,12 @@
 			files = (
 				424C31C42B30A72300279238 /* Model.swift in Sources */,
 				E0EDBD6E2C47CF9500A157EB /* TitleViewSwiftUI.swift in Sources */,
+				E0EDBD762C4E1FBB00A157EB /* ListViewModel.swift in Sources */,
+				E0EDBD722C4DE2C700A157EB /* ListView.swift in Sources */,
 				424C31C82B30A78B00279238 /* Service.swift in Sources */,
 				42B90C172B2A055B00779364 /* ListViewController.swift in Sources */,
 				424C31C02B30A39B00279238 /* MapViewController.swift in Sources */,
+				E0EDBD742C4E158700A157EB /* CustomCellSwiftUI.swift in Sources */,
 				42B90C132B2A055B00779364 /* AppDelegate.swift in Sources */,
 				424C31BD2B30955E00279238 /* DetailViewController.swift in Sources */,
 				E0EDBD702C47D07000A157EB /* RateStarsView.swift in Sources */,

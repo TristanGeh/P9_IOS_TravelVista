@@ -30,6 +30,7 @@ class Service {
             let decoder = JSONDecoder()
             return try decoder.decode(T.self, from: data)
         } catch {
+            print("Error parsing JSON data: \(error)")
             fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
         }
     }

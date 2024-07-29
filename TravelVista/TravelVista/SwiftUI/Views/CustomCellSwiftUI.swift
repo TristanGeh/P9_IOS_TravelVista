@@ -33,10 +33,11 @@ struct CustomCellSwiftUI: View {
             HStack {
                 Text("\(rate)")
                 Image(systemName: "star.fill")
-                    .foregroundColor(.yellow)
+                    .resizable()
+                    .frame(width: 32, height: 32)
+                    .foregroundColor(Color(.customSand))
             }
         }
-        .padding()
     }
 }
 

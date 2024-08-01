@@ -8,30 +8,27 @@
 import SwiftUI
 
 struct CustomCellSwiftUI: View {
-    var pictureName: String
-    var name: String
-    var capital: String
-    var rate: Int
+    var country: Country
     
     var body: some View {
         HStack {
             HStack {
-                Image(pictureName)
+                Image(country.pictureName)
                     .resizable()
                     .frame(width: 50, height: 50)
                 .clipShape(Circle())
                 VStack(alignment: .leading) {
-                    Text(name)
+                    Text(country.name)
                         .foregroundColor(.blue)
                         .font(.system(size: 20))
-                    Text(capital)
+                    Text(country.capital)
                         .foregroundColor(.gray)
                         .font(.system(size: 15))
                 }
             }
             Spacer()
             HStack {
-                Text("\(rate)")
+                Text("\(country.rate)")
                 Image(systemName: "star.fill")
                     .resizable()
                     .frame(width: 32, height: 32)
@@ -41,6 +38,3 @@ struct CustomCellSwiftUI: View {
     }
 }
 
-#Preview {
-    CustomCellSwiftUI(pictureName: "canada", name: "Canada", capital: "Ottawa", rate: 5)
-}

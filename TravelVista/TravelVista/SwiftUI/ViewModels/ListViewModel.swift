@@ -10,6 +10,7 @@ import SwiftUI
 
 class ListViewModel: ObservableObject {
     @Published var regions: [Region] = []
+    @Published var countries: [Country] = []
     
     init() {
         loadRegions()
@@ -18,5 +19,7 @@ class ListViewModel: ObservableObject {
     private func loadRegions() {
         let loadedRegions: [Region] = Service().load("Source.json")
         self.regions = loadedRegions
+        
+        self.countries = loadedRegions.flatMap { $0.countries }
     }
 }

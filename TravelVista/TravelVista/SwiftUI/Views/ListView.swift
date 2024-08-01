@@ -12,6 +12,7 @@ struct ListView: View {
     @ObservedObject private var viewModel = ListViewModel()
     
     
+    
     var body: some View {
         
         NavigationView{
@@ -19,7 +20,11 @@ struct ListView: View {
                 ForEach(viewModel.regions) { region in
                     Section(header: Text(region.name)) {
                         ForEach(region.countries) { country in
-                            CustomCellSwiftUI(pictureName: country.pictureName, name: country.name, capital: country.capital, rate: country.rate)
+                            NavigationLink {
+                                DetailView(country: country)
+                            } label: {
+                                CustomCellSwiftUI(country: country)
+                            }
                         }
                     }
                 }
@@ -34,6 +39,22 @@ struct ListView: View {
                 }
             }
         }
+    }
+}
+
+struct DetailView: UIViewControllerRepresentable{
+    var country: Country
+    
+    func makeUIViewController(context: Context) -> some UIViewController {
+        guard let DetailVC = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { fatalError() }
+        
+        DetailVC.country = country
+        
+        return DetailVC
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        //
     }
 }
 
